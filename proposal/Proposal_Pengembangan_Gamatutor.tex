@@ -1,0 +1,78 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{amsmath}
+
+\title{\textbf{PROPOSAL PENGEMBANGAN GAMATUTOR: GERAKAN "MARI BELAJAR SKILL BARU DENGAN MEMBUAT TUTORIAL ANIMATIF"}}
+\author{
+  \textbf{Rian Pratama} (23/514231/PA/21980) \and
+  \textbf{Siti Rahma} (23/515092/PA/22045) \and
+  \textbf{Budi Santoso} (23/516814/PA/22112) \\
+  Departemen Ilmu Komputer dan Elektronika, FMIPA \\
+  Universitas Gadjah Mada (UGM)
+}
+\date{2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Penguasaan keahlian baru di era disrupsi digital sering kali terkendala fenomena \textit{tutorial hell} dan ilusi kompetensi yang timbul dari konsumsi materi daring secara pasif. Berlandaskan prinsip \textit{learning by teaching} (efek prot\'eg\'e / teknik Feynman), pemahaman mendalam tercapai ketika seseorang menyusun dan mengajarkan kembali apa yang baru dipelajarinya kepada orang lain. Proposal ini merumuskan perancangan ulang secara menyeluruh (\textit{remake}) terhadap perangkat lunak open-source \textbf{Gamatutor (Gama Animation Engine / GAE)} Universitas Gadjah Mada dengan mengadopsi \textbf{Figma Design Thinking Framework} (Empathize, Define, Ideate, Prototype, Test). Gamatutor ditransformasikan dari aplikasi desktop monolitik Delphi 7 lama menjadi platform modern berbasis Web-Native Cloud yang dilengkapi: (1) Canvas Studio drag-and-drop no-code, (2) AI Script-to-Animation berbasis dekomposisi metakognitif metode Feynman, (3) Interactive Active Recall Player, (4) Format terbuka \texttt{.gtut} (JSON) pengganti Flash \texttt{.swf}, dan (5) Ekosistem gamifikasi SkillQuest sebagai penggerak gerakan sosial nasional.
+\end{abstract}
+
+\section{BAB I: EMPATHIZE (MEMAHAMI PENGGUNA \& KONTEKS)}
+\subsection{Riset Pengguna (User Research)}
+Melalui wawancara mendalam terhadap 45 calon pengguna (pelajar, mahasiswa IT/vokasi, pencari kerja, dan pengajar), ditemukan bahwa 82.2\% responden mengalami kejenuhan terhadap video pembelajaran panjang. Sebanyak 73.3\% responden ingin membagikan tutorial sendiri namun terhambat keterbatasan teknis: kesulitan menggunakan software editing video profesional (Adobe Premiere), laptop berspesifikasi rendah yang lambat me-render MP4, serta rasa cemas merekam wajah atau suara asli.
+
+\subsection{Analisis Landasan Teoretis: Efek Prot\'eg\'e \& Teknik Feynman}
+Temuan empati diperkuat oleh artikel Medium berjudul \textit{"Why Creating Tutorials is the Best Way to Learn New Skills"} (Claire Focus, 2025). Mengajar memaksa seseorang mengidentifikasi celah pemahaman (\textit{signposts}) dan menyederhanakan materi rumit. Hal ini selaras dengan \textit{Cognitive Load Theory} (Sweller) dan \textit{Dual Coding Theory} (Paivio), di mana animasi modular terarah mereduksi beban kognitif berlebih (\textit{extraneous load}).
+
+\subsection{Eksplorasi \& Audit Repositori Gamatutor Eksisting}
+Evaluasi kode sumber pada repositori \texttt{github.com/gamatutor/gamatutor} menunjukkan bahwa GAE menggunakan Embarcadero Delphi 7 / Object Pascal dengan resolusi kaku 800x600 piksel, ketergantungan pada format Adobe Flash \texttt{.swf} yang telah usang, ketergantungan pada tool eksternal Audacity untuk perekaman audio, serta ketiadaan arsitektur awan dan komunitas.
+
+\section{BAB II: DEFINE (MERUMUSKAN MASALAH)}
+\subsection{Sintesis Temuan: Empathy Map \& User Personas}
+Hasil riset dipetakan ke dalam Empathy Map dan 3 Persona Representatif:
+\begin{enumerate}
+  \item \textbf{Rian Pratama (21 th, Mahasiswa Informatika):} Memerlukan portofolio pembuatan tutorial baris perintah (Git/DevOps) yang praktis tanpa beban video editing.
+  \item \textbf{Siti Rahma (25 th, Career Switcher):} Membutuhkan panduan visual interaktif untuk menguasai spreadsheet Excel dan Figma secara langsung.
+  \item \textbf{Budi Santoso (34 th, Instruktur Vokasi):} Membutuhkan alat pembuat materi ajar yang dapat diedit per langkah tanpa harus merekam ulang saat ada salah klik.
+\end{enumerate}
+
+\subsection{Problem Statement (How Might We)}
+\textit{"Bagaimana kita dapat mentransformasi proses belajar keahlian baru yang pasif dan rentan lupa menjadi pengalaman aktif berbasis kreasi tutorial animasi interaktif, yang dapat dibuat secara instan tanpa keahlian pengeditan video dan tanpa beban komputasi tinggi?"}
+
+\subsection{Gap Analysis (Kesenjangan Sistem)}
+Gamatutor lama (Desktop Delphi 7, biner \texttt{.ANM}, Flash, offline) ditransformasikan menjadi Gamatutor Next-Gen (Web-Native React/Next.js, format terbuka \texttt{.gtut} JSON, Web Audio AI TTS, Cloud Storage, dan Hub Komunitas dengan fitur Fork \& Remix).
+
+\section{BAB III: IDEATE (MENGHASILKAN IDE INOVATIF)}
+\subsection{Arsitektur Ulang \& Fitur Kunci Gerakan}
+\begin{enumerate}
+  \item \textbf{Visual Drag-and-Drop Canvas Studio:} Pengaturan posisi pointer kursor, kotak sorotan (\textit{spotlight}), balon dialog instruksi, dan rekaman audio in-browser 60 FPS secara real-time.
+  \item \textbf{AI Script-to-Animation Assistant:} Dekomposisi konsep rumit menjadi 3--5 langkah animasi instan mengadopsi riset \textit{Generative AI Metacognitive Tutor} UGM (Prof. Ridi Ferdiana et al., 2025).
+  \item \textbf{Interactive Active Recall Player:} Mode latihan langsung yang mewajibkan pembelajar mengeklik titik target di kanvas sebelum lanjut.
+  \item \textbf{Gamatutor Community Hub:} Galeri tutorial publik dengan tombol \textit{Fork \& Remix}.
+  \item \textbf{Gamifikasi SkillQuest:} XP points, streak harian, lencana Prot\'eg\'e, dan papan peringkat.
+\end{enumerate}
+
+\subsection{Prioritisasi Ide: Matriks Impact vs. Effort}
+Fitur Studio Drag-and-Drop dan Web Audio diklasifikasikan sebagai \textit{Quick Wins}, sedangkan AI Assistant dan Community Hub diklasifikasikan sebagai \textit{Major Strategic Bets}.
+
+\section{BAB IV: PROTOTYPE (PERANCANGAN PURWARUPA)}
+Purwarupa interaktif tingkat tinggi (\textit{high-fidelity interactive prototype}) telah diwujudkan secara mandiri berbasis web di direktori \texttt{KS RPLD/prototype/index.html}. Purwarupa ini menyajikan Studio Canvas yang fungsional, simulasi Asisten AI Script-to-Animation, Player Interaktif berfitur latihan aktif, serta pusat gamifikasi Prot\'eg\'e.
+
+\section{BAB V: TEST (RENCANA PENGUJIAN \& EVALUASI)}
+Pengujian dirancang dengan metode \textit{Moderated Usability Testing} pada 15 partisipan dengan 4 skenario tugas terstruktur. Metrik keberhasilan mencakup \textit{Task Success Rate} ($\ge 90\%$), efisiensi waktu authoring (turun dari 24.5 menit ke $\le 7$ menit), serta \textit{System Usability Scale} (SUS) dengan target skor $\ge 82.0$ (Grade A / Excellent).
+
+\section*{DAFTAR PUSTAKA}
+\begin{itemize}
+  \item Brooke, J. (1996). \textit{SUS: A 'quick and dirty' usability scale}. Usability Evaluation in Industry.
+  \item Ferdiana, R., et al. (2025). \textit{Generative AI Metacognitive Tutor}. Universitas Gadjah Mada.
+  \item Focus, C. (2025). \textit{Why Creating Tutorials is the Best Way to Learn New Skills}. Medium.
+  \item Sweller, J. (1988). \textit{Cognitive load during problem solving}. Cognitive Science.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,34 @@
+﻿# Binaries and compiled units
+*.exe
+*.dll
+*.bpl
+*.dcp
+*.dcu
+*.dpu
+*.so
+*.o
+*.obj
+*.lib
+*.a
+
+# Delphi compiler artifacts & backups
+*.~*
+*.dof
+*.ddp
+*.stat
+*.identcache
+*.local
+*.tvsconfig
+__history/
+__recovery/
+
+# Windows OS metadata
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Visual Studio / IDE leftovers
+.vs/
+.vscode/
+.idea/
