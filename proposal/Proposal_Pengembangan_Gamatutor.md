@@ -33,19 +33,37 @@ Proposal ini merumuskan perancangan ulang secara menyeluruh (*remake*) terhadap 
 ### 1.1 Latar Belakang & Urgensi Gerakan Nasional
 Kebutuhan akan peningkatan keterampilan (*upskilling*) dan penguasaan keahlian baru (*reskilling*) di Indonesia kini bergerak dengan kecepatan yang belum pernah terjadi sebelumnya. Namun, melimpahnya video rekaman di platform seperti YouTube atau platform kursus online melahirkan fenomena patologis: **"Tutorial Hell"**. Pembelajar merasa memahami saat menonton instruktur, tetapi kehilangan pegangan saat harus mengimplementasikan ilmu tersebut secara mandiri. Konsumsi video tutorial yang bersifat pasif (*passive consumption*) gagal membentuk jejak memori jangka panjang (*long-term retention*).
 
-### 1.2 Riset Pengguna (User Research)
-Tim melakukan riset empati terhadap **45 calon pengguna** (mahasiswa IT/vokasi, pencari kerja/career switcher, serta guru/instruktur) di Yogyakarta:
-* **82.2% responden** menyatakan jenuh dengan video panjang (>15 menit) yang sulit diulang per bagian langkah penting.
-* **73.3% responden** mengakui ingin membuat materi tutorial sendiri untuk membuktikan pemahamannya, namun **terhambat oleh kerumitan teknis**: tidak menguasai software editing video berat (Adobe Premiere, After Effects), keterbatasan spesifikasi laptop untuk rendering MP4, serta rasa cemas/enggan merekam wajah dan suara pribadi.
-* **Edukator & Instruktur** mengeluhkan tingginya beban pembuatan materi ajar: jika terjadi satu salah klik pada video rekaman, seluruh proses rekaman harus diulang dari awal.
+### 1.2 Metodologi Riset Empati: Pengumpulan Data Lapangan
+Dalam mengidentifikasi akar permasalahan secara objektif, tim mengimplementasikan tahap *Empathize* melalui penyebaran instrumen kuesioner terstruktur daring dan wawancara kontekstual terhadap **20 responden calon pengguna representatif** (terdiri dari 90.0% Mahasiswa aktif perguruan tinggi, 5.0% Guru/Dosen/Asisten Laboratorium, dan 5.0% Content Creator). Domain keahlian baru yang paling intensif dipelajari responden secara otodidak meliputi:
+* **Pemrograman & IT (65.0%):** Bahasa pemrograman, framework web, baris perintah terminal (CLI), dan arsitektur komputasi awan.
+* **Media & Desain Grafis (65.0%):** UI/UX tools (Figma), editing video, manipulasi grafis (Photoshop, Canva), dan fotografi.
+* **Olah Data & Produktivitas (65.0%):** Spreadsheet (Excel, Google Sheets) tingkat lanjut dan otomasi alur kerja (Notion).
+* **Bisnis & Kewirausahaan (20.0%):** Manajemen proyek digital, literasi ekonomi, dan strategi pemasaran online.
 
-### 1.3 Analisis Landasan Teoretis: Kekuatan Belajar Lewat Mengajar
+Platform rujukan utama responden dalam mencari tutorial didominasi oleh **Sosial Media (YouTube, TikTok, Instagram) sebesar 95.0%**, diikuti Website/Blog teknis (60.0%), dan platform kursus daring (35.0%). Frekuensi menemukan tutorial beranimasi berada pada rerata **3.50 dari skala 5.00**, membuktikan tingginya paparan format visual dalam ekosistem belajar masa kini.
+
+### 1.3 Temuan Kuantitatif & Validasi Empiris Survei Kebutuhan (N = 20)
+Analisis terhadap dataset empiris menghasilkan empat temuan fondasional yang memperkuat urgensi perancangan Gamatutor Next-Gen (divisualisasikan pada Gambar 1.2):
+1. **Konfirmasi Patologis "Tutorial Hell":** Sebanyak **90.0% responden** menyatakan sering mengalami kebuntuan total saat mencoba mempraktikkan materi tutorial video panjang (rerata 3.60/5.00; skala 4 dan 5 mencapai 50.0%). Kendala terbesar video konvensional adalah sifatnya yang pasif dan memicu kantuk (45.0%), boros kuota dan memori (40.0%), serta sulit mencari kembali langkah spesifik tanpa scrubbing timeline (35.0%).
+2. **Paradoks Hasrat Berbagi:** Sebanyak **60.0% responden** pernah memiliki keinginan membuat tutorial sendiri, namun **100% membatalkan niatnya** akibat: repot mengedit video (80.0%), bingung menyusun struktur materi (65.0%), faktor psikologis/kurang percaya diri (55.0%), keterbatasan laptop spek rendah (30.0%), dan beban retake video jika salah rekam (25.0%).
+3. **Validasi Permintaan Fitur Inovatif:** Fitur yang paling diminati untuk mendongkrak efektivitas belajar mencakup: **Mode Latihan Aktif (65.0%)**, **Gamifikasi/Game-feel (65.0%)**, dan **Asisten AI Script-to-Animation (55.0%)**.
+4. **Peluang Adopsi Masif (Greenfield Market):** 95.0% belum pernah mendengar dan 100% belum pernah memakai Gamatutor versi lama. Namun, **80.0% menyatakan sangat membutuhkan** aplikasi seperti Gamatutor dan **85.0% siap mencobanya** jika telah dirilis.
+
+> **Wawasan Kualitatif Autentik Responden:**
+> * *"Rasa senang ketika melihat orang lain paham apa yang saya ajarkan... Menguji pemahaman diri sendiri dengan mengajarkan pada orang lain."* (Validasi Efek Feynman).
+> * *"Bisa menjadi kunci desentralisasi informasi yang kuat demi tercapainya melek informasi."* (Validasi Visi Gerakan Nasional).
+> * *"Harus lihat dulu tools yang membantu dan ekosistem apresiasinya."* (Validasi Kebutuhan Gamifikasi & Creator Rewards).
+
+![Hasil Survei Empiris Pengguna](figures/fig9_survey_findings.png)
+*Gambar 1.2: Sintesis Statistik Temuan Empiris Kebutuhan Pengguna terhadap Solusi Tutorial Animatif (N = 20).*
+
+### 1.4 Analisis Landasan Teoretis: Kekuatan Belajar Lewat Mengajar
 Temuan empati ini dikaitkan erat dengan landasan teoretis artikel Medium berjudul *"Why Creating Tutorials is the Best Way to Learn New Skills"* (Claire Focus, 2025):
 * **The Protégé Effect & Teknik Feynman:** Dinamai dari fisikawan peraih Nobel Richard Feynman, teknik ini menegaskan bahwa tolok ukur pemahaman sejati adalah kemampuan menjelaskan konsep rumit kepada orang awam dengan bahasa yang sangat sederhana. Mengajarkan materi memicu tanggung jawab psikologis (*protégé effect*) yang memaksa seseorang mendeteksi celah pemahamannya (*blind spots*).
 * **Pembuatan "Signposts" (Rambu Navigasi):** Menyusun tutorial modular berfungsi menanamkan patok-patok navigasi kognitif bagi diri sendiri dan rekan pembelajar.
 * **Cognitive Load Theory (Sweller) & Dual Coding Theory (Paivio):** Format animasi terarah (kursor bergerak, kotak sorot/spotlight, dan balon dialog ringkas) mereduksi *extraneous cognitive load* dibandingkan rekaman video linier beresolusi penuh, sehingga kapasitas kerja memori terfokus pada konsep kunci.
 
-### 1.4 Eksplorasi & Audit Repositori Gamatutor Eksisting
+### 1.5 Eksplorasi & Audit Repositori Gamatutor Eksisting
 Berdasarkan audit repositori resmi `github.com/gamatutor/gamatutor`:
 * **Teknologi Pondasi:** Kode ditulis dalam bahasa Object Pascal / Borland Delphi 7 (berkas `.dpr`, `.pas`, `.dfm`). Sangat sulit dikompilasi pada sistem operasi modern dan tidak mendukung web/mobile.
 * **Resolusi Tampilan:** Dibatasi kaku pada 800 x 600 piksel (rasio 4:3 era monitor tabung), sangat buram pada perangkat modern.
@@ -193,3 +211,21 @@ Pasca-pengujian, umpan balik dikelola melalui siklus sprint Agile 2 mingguan:
 9. Paivio, A. (1986). *Mental Representations: A Dual Coding Approach*. Oxford University Press, New York.
 10. Sweller, J. (1988). *Cognitive load during problem solving: Effects on learning*. Cognitive Science, 12(2), 257–285.
 11. Topping, K. J. (1996). *The effectiveness of peer tutoring in further and higher education: A typological review*. Higher Education, 32(3), 321–345.
+
+---
+
+## LAMPIRAN LUARAN PROYEK (DELIVERABLES SUMMARY)
+
+| Komponen Deliverable | Deskripsi & Lokasi Berkas di Workspace | Status Kesiapan |
+| :--- | :--- | :--- |
+| **Dokumen Proposal (PDF)** | `KS RPLD/proposal/Proposal_Pengembangan_Gamatutor.pdf` (14 halaman, format ilmiah-populer, memuat 5 tahapan Design Thinking & data empiris). | **Selesai 100% (Terverifikasi)** |
+| **Dataset Survei Empiris** | `KS RPLD/Survei Validasi Kebutuhan Pengguna terhadap Solusi Tutorial Animatif.xlsx` (N=20 responden, 21 variabel riset empiris). | **Selesai Dianalisis** |
+| **Laporan Analisis Survei** | `KS RPLD/survey_analysis_report.md` (Laporan statistik detail seluruh frekuensi, rerata, dan kutipan kualitatif). | **Selesai 100%** |
+| **Dokumen Naskah Markdown** | `KS RPLD/proposal/Proposal_Pengembangan_Gamatutor.md` (naskah komprehensif memuat temuan empiris untuk telaah daring). | **Selesai 100%** |
+| **Purwarupa Interaktif (High-Fidelity)** | `KS RPLD/prototype/index.html` (Web app standalone: Community Hub, Studio Canvas drag-and-drop, AI Assistant, Player Interaktif, SkillQuest). | **Selesai 100% (Dapat Dicoba)** |
+| **Aset Diagram & Visual** | `KS RPLD/proposal/figures/` (9 diagram visual beresolusi tinggi 300 DPI mencakup arsitektur, user flow, persona, matriks, antarmuka, dan infografis survei). | **Selesai 100%** |
+| **Audit Sumber Repositori** | `KS RPLD/gamatutor_existing/` (kloning lengkap repositori GitHub resmi `gamatutor/gamatutor`). | **Selesai Diaudit** |
+
+> *"Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world."*  
+> — **Albert Einstein** (Kutipan Resmi pada Dokumentasi Gamatutor UGM)
+
